@@ -1,0 +1,68 @@
+/**body**/
+body {
+    background: url("../images/background/watercolor-background.jpg");
+    background-size:100% auto;
+
+    background-color: rgb(131, 189, 184);
+    font-family: 'Lora', serif;
+    
+}
+
+#aboutme {
+    margin-top: 5%;
+}
+
+
+element.style {
+    max-width: 1000px;
+}
+
+a {
+    color: green;
+}
+/**navbar**/
+.nav-link {
+    padding-left: 600px;
+}
+
+.pcards {
+    padding: 0;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 30px;
+    
+
+    
+}
+
+/**form**/
+.alert-info {
+    color: black;
+}
+/**footer**/
+.navbar-brand {
+    font-size: small;
+    
+    
+}
+
+/**portofolio card image section**/
+.card {
+    margin-bottom: 100px;
+    
+}
+
+/** portofio card title **/
+.card-title {
+    text-align: center;
+
+}
+
+/*
+.row-cols-1 {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+    */
