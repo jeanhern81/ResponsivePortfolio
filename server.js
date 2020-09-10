@@ -3,6 +3,8 @@ const express = require('express');
 const sendMail = require('./mail');
 const log = console.log;
 const path = require('path');
+const http = require('http')
+const fs = require('fs')
 
 require('dotenv').config()
 
@@ -15,6 +17,14 @@ const port = process.env.PORT || 5000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('public'));
+
+//routes
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
+
 
 //email
 app.post('/email', function(req, res) {
@@ -34,12 +44,9 @@ app.post('/email', function(req, res) {
 });
 
 
-//routes
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
 
+//ap listening
 app.listen(port, () => 
     log("This app is listening on PORT: " + port + ".")); 
 
