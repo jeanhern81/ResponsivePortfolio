@@ -9,7 +9,7 @@ require('dotenv').config()
 console.log(process.env);
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: false }));
@@ -40,6 +40,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(PORT, () => 
-    log("This app is listening on PORT: " + PORT + ".")); 
+app.listen(port, () => 
+    log("This app is listening on PORT: " + port + ".")); 
 
