@@ -2,8 +2,7 @@ const express = require('express');
 const sendMail = require('./mail');
 const log = console.log;
 const path = require('path');
-const http = require('https')
-const fs = require('fs')
+
 //const sendMailTransport = require('nodemailer/lib/sendmail-transport');
 
 require('dotenv').config()
@@ -20,10 +19,8 @@ app.use(express.static('public'));
 
 //routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public'));
 });
-
-
 
 
 //email
