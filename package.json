@@ -2,7 +2,7 @@
   "name": "responsiveportfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "mail.js",
+  "main": "server.js",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
