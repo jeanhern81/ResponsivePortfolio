@@ -1,10 +1,10 @@
 const express = require('express');
-//const sendMailTransport = require('nodemailer/lib/sendmail-transport');
 const sendMail = require('./mail');
 const log = console.log;
 const path = require('path');
-const http = require('http')
+const http = require('https')
 const fs = require('fs')
+//const sendMailTransport = require('nodemailer/lib/sendmail-transport');
 
 require('dotenv').config()
 
