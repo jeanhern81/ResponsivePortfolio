@@ -3,7 +3,7 @@ const mailGun = require('nodemailer-mailgun-transport');
 require('dotenv').config()
 
 //console.log(process.env);
-var apiKey = api_key;
+
 var api_key = process.env.varapi_key;
 var domain = process.env.vardomain;
 
