@@ -18,16 +18,12 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //routes
-/*
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
-*/
-app.get('/', () => {
-    res.json({
-        message: 'Hello World'
-    });
-});
+
+
 
 //email
 app.post('/email', function(req, res) {
