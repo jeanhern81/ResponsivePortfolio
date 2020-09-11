@@ -1,6 +1,5 @@
 const express = require('express');
 const sendMail = require('./mail');
-fs = require('fs');
 const path = require('path');
 
 //const sendMailTransport = require('nodemailer/lib/sendmail-transport');
@@ -9,12 +8,17 @@ require('dotenv').config()
 console.log(process.env);
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+//const PORT = process.env.PORT || 3000;
+
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Server listening on port 3000');
+    
+    });
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 //routes
 
@@ -47,8 +51,9 @@ app.post('/email', function(req, res) {
 /*app.listen(PORT, () => 
     console.log("This app is listening on PORT: " + PORT + ".")); 
 */
-
+/*
 app.listen(PORT, function () {
     console.log(`App running on port ${PORT}!`);
 
 });
+*/
