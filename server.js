@@ -21,7 +21,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
 */
-require("./routes/htmlRoutes")(app);
+//app.use(require("/routes/htmlRoutes.js"));
+//require("./routes/htmlRoutes")(app);
 
 //email
 app.post('/email', function(req, res) {
