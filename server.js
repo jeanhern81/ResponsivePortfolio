@@ -41,7 +41,12 @@ app.post('/email', function(req, res) {
 });
 
 
-//ap listening
-app.listen(PORT, () => 
+//app listening
+/*app.listen(PORT, () => 
     console.log("This app is listening on PORT: " + PORT + ".")); 
+*/
 
+app.listen(PORT, function () {
+    console.log(`App running on port ${PORT}!`);
+
+});
