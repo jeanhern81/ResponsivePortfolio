@@ -1,6 +1,6 @@
 const express = require('express');
 const sendMail = require('./mail');
-const fs = require('fs');
+fs = require('fs');
 //const path = require('path');
 
 //const sendMailTransport = require('nodemailer/lib/sendmail-transport');
