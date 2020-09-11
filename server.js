@@ -18,7 +18,7 @@ app.use(express.static('public'));
 //routes
 app.get('/', (req, res) => {
     var options = {
-        root: path.join(__dirname, './public/index.html')
+        root: path.join(__dirname, 'public/index.html')
     }
     
 });
