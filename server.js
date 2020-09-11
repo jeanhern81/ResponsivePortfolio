@@ -16,17 +16,11 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //routes
-app.get('/', (req, res) => {
-    var options = {
-        root: path.join(__dirname, 'public/index.html')
-    }
-    
-});
-/*
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
-*/
+
 //app.use(require("/routes/htmlRoutes.js"));
 //require("./routes/htmlRoutes")(app);
 
