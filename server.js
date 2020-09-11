@@ -1,6 +1,6 @@
 const express = require('express');
 const sendMail = require('./mail');
-const log = console.log;
+//const log = console.log;
 const path = require('path');
 
 //const sendMailTransport = require('nodemailer/lib/sendmail-transport');
@@ -13,17 +13,17 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
 //routes
-
+/*
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
-
-
+*/
+require("./routes/htmlRoutes")(app);
 
 //email
 app.post('/email', function(req, res) {
@@ -47,5 +47,5 @@ app.post('/email', function(req, res) {
 
 //ap listening
 app.listen(PORT, () => 
-    log("This app is listening on PORT: " + PORT + ".")); 
+    console.log("This app is listening on PORT: " + PORT + ".")); 
 
