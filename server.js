@@ -8,12 +8,9 @@ require('dotenv').config()
 console.log(process.env);
 
 const app = express();
-//const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log('Server listening on port 3000');
-    
-    });
+
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -23,7 +20,7 @@ app.use(express.static('public'));
 //routes
 /*
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 */
 //app.use(require("/routes/htmlRoutes.js"));
@@ -51,9 +48,7 @@ app.post('/email', function(req, res) {
 /*app.listen(PORT, () => 
     console.log("This app is listening on PORT: " + PORT + ".")); 
 */
-/*
+
 app.listen(PORT, function () {
     console.log(`App running on port ${PORT}!`);
-
 });
-*/
